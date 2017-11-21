@@ -24,8 +24,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.yanzhenjie.andserver.sample.utils.NetUtils;
 import com.yanzhenjie.loading.dialog.LoadingDialog;
-import com.yanzhenjie.nohttp.tools.NetUtil;
 
 /**
  * Created by Yan Zhenjie on 2016/6/13.
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         closeDialog();
         String message = getString(R.string.server_start_succeed);
 
-        String ip = NetUtil.getLocalIPAddress();
+        String ip = NetUtils.getLocalIPAddress();
         if (!TextUtils.isEmpty(ip)) {
             message += ("\nhttp://" + ip + ":8080/\n"
                     + "http://" + ip + ":8080/login\n"
